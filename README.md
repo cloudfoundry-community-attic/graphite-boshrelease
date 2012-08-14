@@ -1,5 +1,7 @@
 # BOSH Release for graphite
 
+NOTE: This is in initial development and does not work yet.
+
 ## Release to your BOSH
 
 To create and upload this release to your BOSH:
