@@ -1,0 +1,6 @@
+---
+name: carbon
+dependencies:
+- python27
+files:
+- carbon/carbon-0.9.10.tar.gz

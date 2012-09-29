@@ -1,0 +1,5 @@
+check process whisper
+  with pidfile /var/vcap/sys/run/whisper/whisper.pid
+  start program "/var/vcap/jobs/whisper/bin/monit_debugger whisper_ctl '/var/vcap/jobs/whisper/bin/whisper_ctl start'"
+  stop program "/var/vcap/jobs/whisper/bin/monit_debugger whisper_ctl '/var/vcap/jobs/whisper/bin/whisper_ctl stop'"
+  group vcap

@@ -1,0 +1,7 @@
+---
+name: whisper
+dependencies:
+- python27
+files:
+- whisper/whisper-0.9.10.tar.gz
+

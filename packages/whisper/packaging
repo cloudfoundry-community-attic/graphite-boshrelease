@@ -14,17 +14,6 @@ export PATH=/var/vcap/packages/python27/bin:$PATH
 export LD_LIBRARY_PATH=/var/vcap/packages/python27/lib
 
 cd $BOSH_COMPILE_TARGET
-tar xzf carbon/carbon-${VERSION}.tar.gz
-cd carbon-${VERSION}
-python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}
-
-cd $BOSH_COMPILE_TARGET
 tar xzf whisper/whisper-${VERSION}.tar.gz
 cd whisper-${VERSION}
-python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}
-
-cd $BOSH_COMPILE_TARGET
-tar xzf graphite-web/graphite-web-${VERSION}.tar.gz
-cd graphite-web-${VERSION}
-python2 check-dependencies.py
 python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}

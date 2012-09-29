@@ -1,0 +1,20 @@
+set -e # exit immediately if a simple command exits with a non-zero status
+set -u # report the usage of uninitialized variables
+
+# Available variables
+# $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
+# $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
+export HOME=/var/vcap
+
+VERSION=0.9.10
+
+export PATH=/var/vcap/packages/python27/bin:$PATH
+
+# make shared libpython2.7.so available
+export LD_LIBRARY_PATH=/var/vcap/packages/python27/lib
+
+cd $BOSH_COMPILE_TARGET
+tar xzf graphite-web/graphite-web-${VERSION}.tar.gz
+cd graphite-web-${VERSION}
+python2 check-dependencies.py
+python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}

@@ -1,0 +1,11 @@
+---
+name: graphite-web
+packages:
+- graphite-web
+- python27
+templates:
+  bin/graphite-web_ctl: bin/graphite-web_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh

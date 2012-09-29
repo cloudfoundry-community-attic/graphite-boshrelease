@@ -1,8 +1,6 @@
 ---
-name: graphite
+name: graphite-web
 dependencies:
 - python27
 files:
-- carbon/carbon-0.9.10.tar.gz
-- whisper/whisper-0.9.10.tar.gz
 - graphite-web/graphite-web-0.9.10.tar.gz
