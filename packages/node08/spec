@@ -1,0 +1,5 @@
+---
+name: node08
+files:
+- node/node-v0.8.11.tar.gz
+- node/coffee-script-1.3.3.tgz
