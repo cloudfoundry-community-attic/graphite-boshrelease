@@ -8,20 +8,23 @@ export HOME=/var/vcap
 
 VERSION=0.9.10
 
-PATH=/var/vcap/packages/python27/bin:$PATH
+export PATH=/var/vcap/packages/python27/bin:$PATH
 
+# make shared libpython2.7.so available
+export LD_LIBRARY_PATH=/var/vcap/packages/python27/lib
+
+cd $BOSH_COMPILE_TARGET
 tar xzf carbon/carbon-${VERSION}.tar.gz
 cd carbon-${VERSION}
-# ./configure --prefix=${BOSH_INSTALL_TARGET}
-sudo python setup.py install
+python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}
 
+cd $BOSH_COMPILE_TARGET
 tar xzf whisper/whisper-${VERSION}.tar.gz
 cd whisper-${VERSION}
-# ./configure --prefix=${BOSH_INSTALL_TARGET}
-sudo python setup.py install
+python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}
 
+cd $BOSH_COMPILE_TARGET
 tar xzf graphite-web/graphite-web-${VERSION}.tar.gz
 cd graphite-web-${VERSION}
-# ./configure --prefix=${BOSH_INSTALL_TARGET}
-python check-dependencies.py
-sudo python setup.py install
+python2 check-dependencies.py
+python2 setup.py install --prefix ${BOSH_INSTALL_TARGET}
