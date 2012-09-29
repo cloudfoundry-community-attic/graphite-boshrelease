@@ -1,5 +1,9 @@
 check process graphite
   with pidfile /var/vcap/sys/run/graphite/graphite.pid
-  start program "/var/vcap/jobs/graphite/bin/monit_debugger graphite_ctl '/var/vcap/jobs/graphite/bin/graphite_ctl start'"
-  stop program "/var/vcap/jobs/graphite/bin/monit_debugger graphite_ctl '/var/vcap/jobs/graphite/bin/graphite_ctl stop'"
+  start program 
+    "/var/vcap/jobs/graphite/bin/monit_debugger graphite_ctl 
+                '/var/vcap/jobs/graphite/bin/graphite_ctl start'"
+  stop program 
+    "/var/vcap/jobs/graphite/bin/monit_debugger graphite_ctl 
+                '/var/vcap/jobs/graphite/bin/graphite_ctl stop'"
   group vcap
