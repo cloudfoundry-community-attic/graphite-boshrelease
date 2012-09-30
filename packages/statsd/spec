@@ -1,0 +1,6 @@
+---
+name: statsd
+dependencies:
+- node08
+files:
+- statsd/**/*
