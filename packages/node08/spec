@@ -1,8 +1,7 @@
 ---
 name: node08
 dependencies:
-- python27 # compilation dependency
-- bzip2    # compilation dependency (via python27)
+- python27
 files:
 - node/node-v0.8.11.tar.gz
 - node/coffee-script-1.3.3.tgz
