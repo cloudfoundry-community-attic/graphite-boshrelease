@@ -6,6 +6,9 @@ set -u # report the usage of uninitialized variables
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
 
+export PATH=/var/vcap/packages/python27/bin:$PATH
+export LD_LIBRARY_PATH=/var/vcap/packages/python27/lib
+
 tar xfv node/node-v0.8.11.tar.gz
 cd node-v0.8.11
 ./configure --prefix=${BOSH_INSTALL_TARGET}
