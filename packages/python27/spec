@@ -2,6 +2,7 @@
 name: python27
 dependencies:
 - sqlite
+- bzip2
 files:
 - python27/Python-2.7.3.tgz
 - python/distribute-0.6.28.tar.gz
