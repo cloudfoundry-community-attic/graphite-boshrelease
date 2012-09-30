@@ -6,6 +6,8 @@ set -u # report the usage of uninitialized variables
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
 
+# CRUFT - python needs bzip2 for bz2 module
+# https://github.com/joyent/node/issues/3504
 export PATH=/var/vcap/packages/python27/bin:$PATH
 export LD_LIBRARY_PATH=/var/vcap/packages/python27/lib
 

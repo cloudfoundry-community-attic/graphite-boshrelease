@@ -9,7 +9,8 @@ PIP_VERSION=1.0
 PYSQLITE_VERSION=2.6.3
 BZIP2_VERSION=1.0.6
 
-# python needs bzip2 library for node compilation https://github.com/joyent/node/issues/3504
+# CRUFT - python needs bzip2 for bz2 module
+# https://github.com/joyent/node/issues/3504
 tar xfv bzip2/bzip2-${BZIP2_VERSION}.tar.gz
 cd bzip2-${BZIP2_VERSION}
 make -f Makefile-libbz2_so
