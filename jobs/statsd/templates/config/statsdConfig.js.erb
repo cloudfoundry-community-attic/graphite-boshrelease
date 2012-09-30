@@ -51,9 +51,12 @@ Optional Variables:
                            { host: 'observer', port: 88125 } ]
 */
 {
-  graphitePort: 2003
-, graphiteHost: "graphite.host.com"
-, port: 8125
+  port: <%= statsd.port || 8125 %>
+, graphiteHost: "<%= graphite.host  || '127.0.0.1' %>"
+, graphitePort: <%= graphite.port || 2003 %>
+, 
+<% if statsd.repeater %>
 , backends: [ "./backends/repeater" ]
 , repeater: [ { host: "10.8.3.214", port: 8125 } ]
+<% end %>
 }

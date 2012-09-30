@@ -1,2 +1,9 @@
 ---
-properties: {}
+properties:
+  statsd:
+    port: 8125
+  graphite:
+    host: 127.0.0.1
+    description: Host for graphite backend
+    port: 2003
+  

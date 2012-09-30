@@ -10,3 +10,14 @@ templates:
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
   config/statsdConfig.js.erb: config/statsdConfig.js
+properties:
+  statsd.port:
+    default: 8125
+    description: Port for incoming UDP messages to StatsD
+  graphite.host:
+    default: 127.0.0.1
+    description: Host for graphite backend
+  graphite.port:
+    default: 2003
+    description: Host for graphite backend
+    
